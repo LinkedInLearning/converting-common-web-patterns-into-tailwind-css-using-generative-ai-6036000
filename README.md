@@ -1,5 +1,5 @@
-# COURSENAME
-This is the repository for the LinkedIn Learning course `course-name`. The full course is available from [LinkedIn Learning][lil-course-url].
+# Converting Common Web Patterns into Tailwind CSS Using Generative AI
+This is the repository for the LinkedIn Learning course `Converting Common Web Patterns into Tailwind CSS Using Generative AI`. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![course-name-alt-text][lil-thumbnail-url] 
 
