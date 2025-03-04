@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function loadPartial(id) {
+      const file = `/patterns/${id}.html`;
+      fetch(file)
+        .then(response => response.text())
+        .then(html => document.getElementById(id).innerHTML = html)
+        .catch(error => console.error(`Error loading ${file}:`, error));
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('div[data-dynamic="true"]').forEach(div => {
+        loadPartial(div.id);
+      });
+    });
+  </script>
+</head>
+
+<body class="bg-gray-100">
+
+  <div data-dynamic="true" id="navigation"></div>
+  <div data-dynamic="true" id="hero"></div>
+  <div data-dynamic="true" id="features"></div>
+  <div data-dynamic="true" id="testimonials"></div>
+  <div data-dynamic="true" id="logo-cloud"></div>
+  <div data-dynamic="true" id="newsletter"></div>
+  <div data-dynamic="true" id="footer"></div>
+
+</body>
+
+</html>
