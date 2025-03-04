@@ -7,7 +7,8 @@
   <title>Wireframe</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    function loadPartial(id, file) {
+    function loadPartial(id) {
+      const file = `${id}.html`;
       fetch(file)
         .then(response => response.text())
         .then(html => document.getElementById(id).innerHTML = html)
@@ -15,8 +16,9 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-      loadPartial("hero", "hero.html");
-      loadPartial("newsletter", "newsletter.html");
+      document.querySelectorAll('div[data-dynamic="true"]').forEach(div => {
+        loadPartial(div.id);
+      });
     });
   </script>
 </head>
