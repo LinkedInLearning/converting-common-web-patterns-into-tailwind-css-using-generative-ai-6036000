@@ -21,6 +21,18 @@
       });
     });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.body.addEventListener('click', function (event) {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu && event.target === mobileMenuButton) {
+          mobileMenu.classList.toggle('hidden');
+        }
+      });
+    });
+  </script>
 </head>
 
 <body class="bg-gray-100">
