@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FAQ = () => (
-  <section className="py-16 bg-gray-100">
+  <section className="py-16 bg-brand">
     <div className="container mx-auto px-4">
       <h2 className="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
       <div className="space-y-4">
